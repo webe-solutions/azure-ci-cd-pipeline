@@ -86,15 +86,14 @@ The Status Badge in the ReadME File should also indicate if your tests are passi
 ## Azure App Service
 For this project we will be deploying our application to Azure App Services. For initial setup and deployment follow the below steps, more infromation can be found [here](https://docs.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest)
 
-1. From the project directory in Azure Cloud Shell run ```az webapp up -n <your-appservice-name> -l <your-location> -sku B1```
-   1. -n <your-appservice-ame> is the name of your application. This needs to be a unique value as it will be used used in your application url.
-   2. -l <your-location> is the location you would like to deploy your application to.
-   3. -sku B1 refers to the size of the image created.
+1. From the project directory in Azure Cloud Shell run ``` az webapp up --name <your-appservice-name> --location "<your-location>" --sku B1 ```
+   1. --name <your-appservice-ame> is the name of your application. This needs to be a unique value as it will be used used in your application url.
+   2. --location "<your-location>" is the location you would like to deploy your application to, eg: germanywestcentral.
+   3. --sku B1 refers to the size of the image created.
 
-  ![alt text](https://github.com/webe-solutions/azure-ci-cd-pipeline/blob/main/images/az-webapp-up.png "Azure App Services") 
+![alt text](https://github.com/webe-solutions/azure-ci-cd-pipeline/blob/main/images/az-webapp-up.png "Azure App Services") 
 
-    The URL of your application will be displayed in the output and can be used to access the application, for example:
+The URL of your application will be displayed in the output and can be used to access the application, for example:
 
-    ![alt text](https://github.com/webe-solutions/azure-ci-cd-pipeline/blob/main/images/app-service-url.png "Running application") 
-
+![alt text](https://github.com/webe-solutions/azure-ci-cd-pipeline/blob/main/images/app-service-url.png "Running application") 
 
