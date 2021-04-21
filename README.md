@@ -80,8 +80,7 @@ An inportant compenent of Continuous Integration is testing all code, to achieve
 To enable GitHub Actions, navigate to your code repository and perform the below steps:
 1. Click on Actions
 2. Under "Get Started with GtHub Actions", click "setup a new workflow yourself" and replace the content with the 
-content from the following [URL](https://github.com/webe-solutions/azure-ci-cd-pipeline/blob/main/.github/workflows/
-main.yml)
+content from the following [URL](https://github.com/webe-solutions/azure-ci-cd-pipeline/blob/main/.github/workflows/main.yml)
 3. Commit your changes.
 4. Make sure to update your project by running ```git pull``` from the project directory in Azure Code Shell
 If everythign is setup correctly and all tests pass you should see results similar to the below image, with a green 
