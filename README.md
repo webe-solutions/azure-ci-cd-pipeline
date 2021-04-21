@@ -49,7 +49,7 @@ For our development environment we will use Azure Shell and push our code to a G
 
    ![alt text](https://github.com/webe-solutions/azure-ci-cd-pipeline/blob/main/images/all-keys.png "SSH Keys") 
 
-6. Once the SSH Key has been successfuly setup, you can clone the Git Repository by running ``` git clone https://github.com/webe-solutions/azure-ci-cd-pipeline.git ``` from the root of the Azure Cloud Shell. This will copy all project files and if successful, the output will be similar to the below image:
+6. Once the SSH Key has been successfuly setup, you can clone the Git Repository by running ``` git clone git@github.com:wallandall/azure-ci-cd-pipeline.git ``` from the root of the Azure Cloud Shell. This will copy all project files and if successful, the output will be similar to the below image:
   ![alt text](https://github.com/webe-solutions/azure-ci-cd-pipeline/blob/main/images/cloned.png "Cloned Git Repository")  
 
 7. Setup a Python Virtual Environment by running ``` python3 -m venv ~/.azure-ci-cd-pipeline ``` from the root of the Azure Cloud Shell
@@ -59,10 +59,10 @@ For our development environment we will use Azure Shell and push our code to a G
        1.   Installs project requirements from the requirements.txt file
        2.   Runs pytest on test_hello.py
        3.   Runs pylint
-    If all succesful, the below results will be displayed
+         If all succesful, the below results will be displayed
 
-    ![alt text](https://github.com/webe-solutions/azure-ci-cd-pipeline/blob/main/images/make-all.png "Make All")  
-   2.  To create an Azure App Service and initial deployment of your application run ```az webapp up -n <your-appservice-name> -l your-location ``` 
+         ![alt text](https://github.com/webe-solutions/azure-ci-cd-pipeline/blob/main/images/make-all.png "Make All")  
+   2. To create an Azure App Service and initial deployment of your application run ```az webapp up -n <your-appservice-name> -l your-location ``` 
        1.  -n attribute is the name of your application and needs to be unique. Replace <your-appservice-name> with the name of your application, this will be included in the application URL.
        2.  -l attribute defines the location your application will be deployed to eg: germanywestcentral . More information on az webapp commands can be found [here](https://docs.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest)
     After successfully running the above commands, you will see the below output: 
@@ -72,3 +72,15 @@ For our development environment we will use Azure Shell and push our code to a G
     The URL of your application will be displayed in the output and can be used to access the application, for example:
 
     ![alt text](https://github.com/webe-solutions/azure-ci-cd-pipeline/blob/main/images/app-service-url.png "Running application") 
+
+## GitHub Actions
+An inportant compenent of Continuous Integration is testing all code, to achieve this we will use GitHub Actions. To enable GitHub Actions, navigate to your code repository and perform the below steps:
+1. Click on Actions
+2. Under "Get Started with GtHub Actions", click "setup a new workflow yourself" and replace the content with the content from the following [URL](https://github.com/webe-solutions/azure-ci-cd-pipeline/blob/main/.github/workflows/main.yml)
+3. Commit your changes.
+4. Make sure to update your project by running ```git pull``` from the project directory in Azure Code Shell
+If everythign is setup correctly and all tests pass you should see results similar to the below image, with a green tick
+
+![alt text](https://github.com/webe-solutions/azure-ci-cd-pipeline/blob/main/images/github-actions.png "GitHub Actions")
+
+
