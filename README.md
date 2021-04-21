@@ -54,24 +54,16 @@ For our development environment we will use Azure Shell and push our code to a G
 
 7. Setup a Python Virtual Environment by running ``` python3 -m venv ~/.azure-ci-cd-pipeline ``` from the root of the Azure Cloud Shell
 8. Activate the Python Environment by running ``` source ~/.azure-ci-cd-pipeline/bin/activate ``` 
-9. To install dependencies and ensure the project is properly configured, navigate to the project directory and run the following commands from Azure Cloud Shell:
-   1.  ``` make all ``` , this perform the following actions:
-       1.   Installs project requirements from the requirements.txt file
-       2.   Runs pytest on test_hello.py
-       3.   Runs pylint
-         If all succesful, the below results will be displayed
+9. To install dependencies and ensure the project is properly configured, navigate to the project directory and run ``` make all ``` , this will perform the following actions:
+   1.  Installs project requirements from the requirements.txt file
+   2.  Runs pytest on test_hello.py.
+   3.  Runs pylint to lint all code.
 
-         ![alt text](https://github.com/webe-solutions/azure-ci-cd-pipeline/blob/main/images/make-all.png "Make All")  
-   2. To create an Azure App Service and initial deployment of your application run ```az webapp up -n <your-appservice-name> -l your-location ``` 
-       1.  -n attribute is the name of your application and needs to be unique. Replace <your-appservice-name> with the name of your application, this will be included in the application URL.
-       2.  -l attribute defines the location your application will be deployed to eg: germanywestcentral . More information on az webapp commands can be found [here](https://docs.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest)
-    After successfully running the above commands, you will see the below output: 
+   If all above steps are successful, the below results will be displayed
 
-    ![alt text](https://github.com/webe-solutions/azure-ci-cd-pipeline/blob/main/images/az-webapp-up.png "Azure App Services") 
+   ![alt text](https://github.com/webe-solutions/azure-ci-cd-pipeline/blob/main/images/make-all.png "Make All")  
 
-    The URL of your application will be displayed in the output and can be used to access the application, for example:
-
-    ![alt text](https://github.com/webe-solutions/azure-ci-cd-pipeline/blob/main/images/app-service-url.png "Running application") 
+ 
 
 ## GitHub Actions
 An inportant compenent of Continuous Integration is testing all code, to achieve this we will automate the process GitHub Actions. 
@@ -90,4 +82,19 @@ tick
 Actions")
 
 The Status Badge in the ReadME File should also indicate if your tests are passing succeffuly 
+
+## Azure App Service
+For this project we will be deploying our application to Azure App Services. For initial setup and deployment follow the below steps, more infromation can be found [here](https://docs.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest)
+
+1. From the project directory in Azure Cloud Shell run ```az webapp up -n <your-appservice-name> -l <your-location> -sku B1```
+   1. -n <your-appservice-ame> is the name of your application. This needs to be a unique value as it will be used used in your application url.
+   2. -l <your-location> is the location you would like to deploy your application to.
+   3. -sku B1 refers to the size of the image created.
+
+  ![alt text](https://github.com/webe-solutions/azure-ci-cd-pipeline/blob/main/images/az-webapp-up.png "Azure App Services") 
+
+    The URL of your application will be displayed in the output and can be used to access the application, for example:
+
+    ![alt text](https://github.com/webe-solutions/azure-ci-cd-pipeline/blob/main/images/app-service-url.png "Running application") 
+
 
