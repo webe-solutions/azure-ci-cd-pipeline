@@ -11,13 +11,13 @@ variables:
   azureServiceConnectionId: '6d79ea5a-8ed2-4f18-9059-3fd9847bac8d'
 
   # Web app name
-  webAppName: ''
+  webAppName: 'azure-ci-cd-pipeline'
 
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
 
   # Environment name
-  environmentName: ''
+  environmentName: 'azure-ci-cd-pipeline'
 
   # Project root folder. Point to the folder containing manage.py file.
   projectRoot: $(System.DefaultWorkingDirectory)
@@ -80,7 +80,7 @@ stages:
             displayName: 'Use Python version'
 
           - task: AzureWebApp@1
-            displayName: 'Deploy Azure Web App : '
+            displayName: 'Deploy Azure Web App : azure-ci-cd-pipeline'
             inputs:
               azureSubscription: $(azureServiceConnectionId)
               appName: $(webAppName)
