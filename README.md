@@ -3,8 +3,6 @@
 This project demponstrates the steps on how to build a CI/CD pipeline using Azure Devops and Github to deploy a Pyhon Machine Learning Application to Azure App Services
 Technolog
 
-[![Python application test with Github Actions](https://github.com/webe-solutions/azure-ci-cd-pipeline/actions/workflows/main.yml/badge.svg)](https://github.com/webe-solutions/azure-ci-cd-pipeline/actions/workflows/main.yml)
-
 
 
 ## Project Plan
@@ -76,13 +74,21 @@ For our development environment we will use Azure Shell and push our code to a G
     ![alt text](https://github.com/webe-solutions/azure-ci-cd-pipeline/blob/main/images/app-service-url.png "Running application") 
 
 ## GitHub Actions
-An inportant compenent of Continuous Integration is testing all code, to achieve this we will use GitHub Actions. To enable GitHub Actions, navigate to your code repository and perform the below steps:
-1. Click on Actions
-2. Under "Get Started with GtHub Actions", click "setup a new workflow yourself" and replace the content with the content from the following [URL](https://github.com/webe-solutions/azure-ci-cd-pipeline/blob/main/.github/workflows/main.yml)
-3. Commit your changes.
-4. Make sure to update your project by running ```git pull``` from the project directory in Azure Code Shell
-If everythign is setup correctly and all tests pass you should see results similar to the below image, with a green tick
-
+An inportant compenent of Continuous Integration is testing all code, to achieve this we will use GitHub Actions. 
 ![alt text](https://github.com/webe-solutions/azure-ci-cd-pipeline/blob/main/images/github-actions.png "GitHub Actions")
 
+To enable GitHub Actions, navigate to your code repository and perform the below steps:
+1. Click on Actions
+2. Under "Get Started with GtHub Actions", click "setup a new workflow yourself" and replace the content with the 
+content from the following [URL](https://github.com/webe-solutions/azure-ci-cd-pipeline/blob/main/.github/workflows/
+main.yml)
+3. Commit your changes.
+4. Make sure to update your project by running ```git pull``` from the project directory in Azure Code Shell
+If everythign is setup correctly and all tests pass you should see results similar to the below image, with a green 
+tick
+
+![alt text](https://github.com/webe-solutions/azure-ci-cd-pipeline/blob/main/images/github-actions-results.png "GitHub 
+Actions")
+
+The Status Badge in the ReadME File should also indicate if your tests are passing succeffuly 
 
