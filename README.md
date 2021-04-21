@@ -3,6 +3,8 @@
 This project demponstrates the steps on how to build a CI/CD pipeline using Azure Devops and Github to deploy a Pyhon Machine Learning Application to Azure App Services
 Technolog
 
+[![Python application test with Github Actions](https://github.com/webe-solutions/azure-ci-cd-pipeline/actions/workflows/main.yml/badge.svg)](https://github.com/webe-solutions/azure-ci-cd-pipeline/actions/workflows/main.yml)
+
 
 
 ## Project Plan
