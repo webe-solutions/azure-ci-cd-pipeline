@@ -81,12 +81,14 @@ tick
 ![alt text](https://github.com/webe-solutions/azure-ci-cd-pipeline/blob/main/images/github-actions-results.png "GitHub 
 Actions")
 
-The Status Badge in the ReadME File should also indicate if your tests are passing succeffuly 
+The Status Badge in the README.md File should also indicate if your tests are passing succeffuly 
 
 ## Azure App Service
 For this project we will be deploying our application to Azure App Services. For initial setup and deployment follow the below steps, more infromation can be found [here](https://docs.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest)
 
-1. From the project directory in Azure Cloud Shell run ``` az webapp up --name <your-appservice-name> --location "<your-location>" --sku B1 ```
+1. Replace the name of the app in make_predict_azure_app.sh with your-appservice-name (this is a unique name and will be used in the URL)
+2. Save and commit your code.
+3. From the project directory in Azure Cloud Shell run ``` az webapp up --name <your-appservice-name> --location "<your-location>" --sku B1 ```
    1. --name <your-appservice-ame> is the name of your application. This needs to be a unique value as it will be used used in your application url.
    2. --location "<your-location>" is the location you would like to deploy your application to, eg: germanywestcentral.
    3. --sku B1 refers to the size of the image created.
@@ -97,3 +99,5 @@ The URL of your application will be displayed in the output and can be used to a
 
 ![alt text](https://github.com/webe-solutions/azure-ci-cd-pipeline/blob/main/images/app-service-url.png "Running application") 
 
+
+## Continuous Delivery with Azure DevOps
