@@ -99,5 +99,35 @@ The URL of your application will be displayed in the output and can be used to a
 
 ![alt text](https://github.com/webe-solutions/azure-ci-cd-pipeline/blob/main/images/app-service-url.png "Running application") 
 
+4. Test application by running ```./make_predict_azure_app.sh ``` from the project directory in Azure Cloud Shell
+   1. if you get a permission denied run ``` chmod +x make_predict_azure_app.sh ``` from the project directory in Azure Cloud Shell
+The output should be as per the below image:
+![alt text](https://github.com/webe-solutions/azure-ci-cd-pipeline/blob/main/images/make-predict.png "Make Prections") 
+
 
 ## Continuous Delivery with Azure DevOps
+In this step we will implement Azure Pipelines to achieve Continuous Delivery for all changes to our application refer to the official docuentation for more [details](https://docs.microsoft.com/en-us/azure/devops/pipelines/ecosystems/python-webapp?view=azure-devops)
+1. Create a new project in [Azure Devops](https://dev.azure.com/)
+2. Setup a new service connection via Azure Resource Manager and Pipeline
+3. Create a new pipeline and integrate it with your project
+
+After successfuly adding the pipeline you will have similar results to the below images:
+
+![alt text](https://github.com/webe-solutions/azure-ci-cd-pipeline/blob/main/images/azure-pipelines1.png "Azure Pipelines") 
+
+
+![alt text](https://github.com/webe-solutions/azure-ci-cd-pipeline/blob/main/images/azure-pipelines2.png "Successful Job") 
+
+
+## Log Files
+The log files for the running applrication can be accessed by navigating ``` https://<app-name>.scm.azurewebsites.net/api/logs/docker  ``` .
+
+![alt text](https://github.com/webe-solutions/azure-ci-cd-pipeline/blob/main/images/log-file.png "Log File") 
+
+
+## Enhancements
+1. Instead of using Azure Pipelines, GitHub Actions could be used to deploy the application. This would improve the proces as all workflows would be maintained by one system therfore removing complexity. Additionaly Microsoft has limited the use of the free tier of Azure DevOps and new projects will not be able to use the Azure Piplines. Microsoft have recommended the use of GitHub Actions, more information can be found in this [document](https://devblogs.microsoft.com/devops/change-in-azure-pipelines-grant-for-public-projects/)
+2. Implement different environments for Test, QA and Production.
+3. Adding predicitions for other cities
+   
+## Demo
