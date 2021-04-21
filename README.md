@@ -49,7 +49,7 @@ For our development environment we will use Azure Shell and push our code to a G
 
    ![alt text](https://github.com/webe-solutions/azure-ci-cd-pipeline/blob/main/images/all-keys.png "SSH Keys") 
 
-6. Once the SSH Key has been successfuly setup, you can clone the Git Repository by running ``` git clone git@github.com:wallandall/azure-ci-cd-pipeline.git ``` from the root of the Azure Cloud Shell. This will copy all project files and if successful, the output will be similar to the below image:
+6. Once the SSH Key has been successfuly setup, you can clone the Git Repository by running ``` git clone https://github.com/webe-solutions/azure-ci-cd-pipeline.git ``` from the root of the Azure Cloud Shell. This will copy all project files and if successful, the output will be similar to the below image:
   ![alt text](https://github.com/webe-solutions/azure-ci-cd-pipeline/blob/main/images/cloned.png "Cloned Git Repository")  
 
 7. Setup a Python Virtual Environment by running ``` python3 -m venv ~/.azure-ci-cd-pipeline ``` from the root of the Azure Cloud Shell
