@@ -117,3 +117,17 @@ After successfuly adding the pipeline you will have similar results to the below
 
 
 ![alt text](https://github.com/webe-solutions/azure-ci-cd-pipeline/blob/main/images/azure-pipelines2.png "Successful Job") 
+
+
+## Log Files
+The log files for the running applrication can be accessed by navigating ``` https://<app-name>.scm.azurewebsites.net/api/logs/docker  ``` .
+
+![alt text](https://github.com/webe-solutions/azure-ci-cd-pipeline/blob/main/images/log-file.png "Log File") 
+
+
+## Enhancements
+1. Instead of using Azure Pipelines, GitHub Actions could be used to deploy the application. This would improve the proces as all workflows would be maintained by one system therfore removing complexity. Additionaly Microsoft has limited the use of the free tier of Azure DevOps and new projects will not be able to use the Azure Piplines. Microsoft have recommended the use of GitHub Actions, more information can be found in this [document](https://devblogs.microsoft.com/devops/change-in-azure-pipelines-grant-for-public-projects/)
+2. Implement different environments for Test, QA and Production.
+3. Adding predicitions for other cities
+   
+## Demo
