@@ -8,7 +8,7 @@ This project demponstrates the steps on how to build a CI/CD pipeline using Azur
 Click on the below links to view the Trello Board and Project Plan
 
 * [Trello board](https://trello.com/b/DKIrIpDZ/deploy-cicd-pipeline-in-azure)
-* [Project Plan](https://docs.google.com/spreadsheets/d/1X-_tgCsTntOpF15eZHiBT_9kV8qnpq180sBZ4QrkGVM/edit#gid=1348135932)
+* [Project Plan](https://docs.google.com/spreadsheets/d/1X-_tgCsTntOpF15eZHiBT_9kV8qnpq180sBZ4QrkGVM/edit?usp=sharing)
 
 ## Instructions
 
