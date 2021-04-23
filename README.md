@@ -94,11 +94,15 @@ For this project we will be deploying our application to Azure App Services. For
 
 ![alt text](https://github.com/webe-solutions/azure-ci-cd-pipeline/blob/main/images/az-webapp-up.png "Azure App Services") 
 
+In the Azure Portal you will be able to see an overview of Azure Aup Services as per the below image.
+
+![alt text](https://github.com/webe-solutions/azure-ci-cd-pipeline/blob/main/images/app-service.png "Azure App Services in Azure Portal") 
+
 The URL of your application will be displayed in the output and can be used to access the application, for example:
 
 ![alt text](https://github.com/webe-solutions/azure-ci-cd-pipeline/blob/main/images/app-service-url.png "Running application") 
 
-4. Test application by running ```./make_predict_azure_app.sh ``` from the project directory in Azure Cloud Shell
+1. Test application by running ```./make_predict_azure_app.sh ``` from the project directory in Azure Cloud Shell
    1. if you get a permission denied run ``` chmod +x make_predict_azure_app.sh ``` from the project directory in Azure Cloud Shell
 The output should be as per the below image:
 ![alt text](https://github.com/webe-solutions/azure-ci-cd-pipeline/blob/main/images/make-predict.png "Make Prections") 
@@ -123,6 +127,11 @@ The log files for the running applrication can be accessed by navigating ``` htt
 
 ![alt text](https://github.com/webe-solutions/azure-ci-cd-pipeline/blob/main/images/log-file.png "Log File") 
 
+## Load Test with Locust
+
+![alt text](https://github.com/webe-solutions/azure-ci-cd-pipeline/blob/main/images/locust1.png "Log File")
+
+![alt text](https://github.com/webe-solutions/azure-ci-cd-pipeline/blob/main/images/locust2.png "Log File")
 
 ## Enhancements
 1. Instead of using Azure Pipelines, GitHub Actions could be used to deploy the application. This would improve the proces as all workflows would be maintained by one system therfore removing complexity. Additionaly Microsoft has limited the use of the free tier of Azure DevOps and new projects will not be able to use the Azure Piplines. Microsoft have recommended the use of GitHub Actions, more information can be found in this [document](https://devblogs.microsoft.com/devops/change-in-azure-pipelines-grant-for-public-projects/)
