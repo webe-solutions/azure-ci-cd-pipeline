@@ -133,6 +133,8 @@ The log files for the running applrication can be accessed by navigating ``` htt
 
 ![alt text](https://github.com/webe-solutions/azure-ci-cd-pipeline/blob/main/images/locust2.png "Log File")
 
+![alt text](https://github.com/webe-solutions/azure-ci-cd-pipeline/blob/main/images/locust3.png "Log File")
+
 ## Enhancements
 1. Instead of using Azure Pipelines, GitHub Actions could be used to deploy the application. This would improve the proces as all workflows would be maintained by one system therfore removing complexity. Additionaly Microsoft has limited the use of the free tier of Azure DevOps and new projects will not be able to use the Azure Piplines. Microsoft have recommended the use of GitHub Actions, more information can be found in this [document](https://devblogs.microsoft.com/devops/change-in-azure-pipelines-grant-for-public-projects/)
 2. Implement different environments for Test, QA and Production.
