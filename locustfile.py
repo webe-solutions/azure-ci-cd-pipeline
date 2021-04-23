@@ -1,16 +1,16 @@
-import time
+import random
 from locust import HttpUser, task, between
 
 
-class MakePredict(HttpUser):
-    wait_time = between(1, 2)
+class QuickstartUser(HttpUser):
+    wait_time = between(5, 10)
 
     @task
-    def index_page(self):
+    def index(self):
         self.client.get("/")
 
-    @task
-    def load_predict(self):
+    @task(3)
+    def checkPredict(self):
         self.client.post("/predict", json={
             "CHAS": {
                 "0": 0
