@@ -4,12 +4,6 @@ This project demponstrates the steps on how to build a CI/CD pipeline using Azur
 
 [![Python application test with Github Actions](https://github.com/webe-solutions/azure-ci-cd-pipeline/actions/workflows/main.yml/badge.svg)](https://github.com/webe-solutions/azure-ci-cd-pipeline/actions/workflows/main.yml)
 
-## Project Plan
-Click on the below links to view the Trello Board and Project Plan
-
-* [Trello board](https://trello.com/b/DKIrIpDZ/deploy-cicd-pipeline-in-azure)
-* [Project Plan](https://docs.google.com/spreadsheets/d/1X-_tgCsTntOpF15eZHiBT_9kV8qnpq180sBZ4QrkGVM/edit?usp=sharing)
-
 ## Instructions
 
 
@@ -142,5 +136,3 @@ The log files for the running applrication can be accessed by navigating ``` htt
 4. Implement Docker containers which would simplify application deployment
 5. Use AzureDevops Boards instead of Trello Boards
    
-## Demo
-A video demonstration of the process can be found [here](https://youtu.be/FhjhtxDQIcs)
